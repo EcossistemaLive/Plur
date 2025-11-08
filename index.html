@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Acompanhamento | PLUR Movimento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Variáveis de Cores e Fontes da PLUR (extraído do seu arquivo) */
+        :root {
+            --azul-petroleo: #06192a;
+            --verde-vibrante: #00e800;
+            --cinza-claro: #f4f4f4;
+            --branco: #ffffff;
+            --font-primaria: 'Poppins', sans-serif;
+            --font-secundaria: 'Merriweather', serif;
+            --border-color: rgba(255, 255, 255, 0.1); /* Adicionado para consistência */
+        }
+
+        /* Estilos Globais do Body com Textura PLUR */
+        body {
+            font-family: var(--font-primaria);
+            background-color: var(--azul-petroleo);
+            color: var(--cinza-claro);
+            background-image:
+                radial-gradient(circle at 50% 0, rgba(255, 255, 255, 0.05), transparent 50%),
+                url('https://raw.githubusercontent.com/Clebito2/Plur/main/PLUR%20Movimento-06.png');
+            background-repeat: no-repeat, repeat;
+            background-size: auto, 150px auto;
+            background-attachment: fixed, fixed;
+            background-position: center, center;
+        }
+
+        /* Overlay semitransparente para suavizar a textura */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(6, 25, 42, 0.85); /* Overlay azul petróleo */
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Estilos de Texto com Sombra (para legibilidade) */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-primaria);
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        p, li, span, td, th, div {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        /* === ESTILOS DAS ABAS (Padrão do Projeto Anterior) === */
+        .tab-button {
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #9ca3af; /* text-gray-400 */
+            border-bottom: 3px solid transparent;
+            transition: color 0.3s ease, border-color 0.3s ease;
+            text-shadow: none; /* Remove sombra do texto para a aba */
+        }
+        .tab-button:hover {
+            color: var(--cinza-claro);
+        }
+        .tab-button.active {
+            color: var(--verde-vibrante);
+            border-bottom-color: var(--verde-vibrante);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* === ESTILOS DO IFRAME (Padrão do Projeto Anterior) === */
+        .iframe-wrapper {
+            width: 100%;
+            height: 100vh; /* 100% da altura da tela */
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #ffffff; /* Fundo branco de carregamento */
+        }
+        .iframe-content {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Animação de Fade In */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark">
+
+    <header class="py-6 px-4 sm:px-8 md:px-16 fixed top-0 left-0 right-0 z-50" style="background-color: rgba(6, 25, 42, 0.95); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo live oficial-36.png" alt="Logo Live Liderança & Vendas" class="h-12">
+                <img src="https://raw.githubusercontent.com/Clebito2/Plur/main/PLUR%20Movimento-03.png" alt="Logo PLUR Movimento" class="h-12 bg-transparent">
+            </div>
+            <p class="hidden md:block text-right text-gray-300">Dashboard de Acompanhamento | PLUR Movimento</p>
+        </div>
+    </header>
+
+    <main class="pt-32"> <section class="container mx-auto px-4 md:px-16 fade-in">
+            
+            <div class="flex flex-wrap border-b" style="border-bottom-color: var(--border-color);">
+                <button class="tab-button active" data-tab-target="#tab-proposta">
+                    <i data-lucide="file-text" class="inline-block w-4 h-4 mr-1"></i>
+                    Apresentação (Ecossistema)
+                </button>
+                <button class="tab-button" data-tab-target="#tab-plano">
+                    <i data-lucide="clipboard-check" class="inline-block w-4 h-4 mr-1"></i>
+                    Plano de Ação
+                </button>
+                <button class="tab-button" data-tab-target="#tab-rh">
+                    <i data-lucide="users" class="inline-block w-4 h-4 mr-1"></i>
+                    RH | Guia de Entrevista
+                </button>
+            </div>
+
+            <div class="mt-6">
+                
+                <div class="tab-content active" id="tab-proposta">
+                    <div class="iframe-wrapper">
+                        <iframe class="iframe-content" 
+                                src="https://clebito2.github.io/Plur/" 
+                                title="A Nova PLUR: O Ecossistema" 
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-plano">
+                    <div class="iframe-wrapper">
+                        <iframe class="iframe-content" 
+                                src="https://planoplur.netlify.app/" 
+                                title="Plano de Ação Estratégico" 
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-rh">
+                    <div class="iframe-wrapper">
+                        <iframe class="iframe-content" 
+                                src="https://recrutamentoeselecao-plur.netlify.app/" 
+                                title="RH Plur | Guia de Entrevista" 
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 mt-16" style="background-color: rgba(6, 25, 42, 0.95); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="container mx-auto px-8 text-center text-gray-500">
+            <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo live oficial-34.png" alt="Logo Live" class="h-20 mx-auto mb-8">
+            <p>Live Liderança & Vendas</p>
+            <p class="text-sm">Alta performance começa com atitude.</p>
+            <p class="text-sm mt-2">(62) 98400-2840 | luizportal@ecossistemalive.com.br</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.getAttribute('data-tab-target');
+                    const targetContent = document.querySelector(targetId);
+
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
