@@ -54,8 +54,13 @@
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        p, li, span, td, th, div {
+        /* Removido o 'div' da sombra de texto para evitar conflitos */
+        p, li, span, td, th {
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+        .text-brand-green {
+            color: var(--verde-vibrante);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
         }
 
         /* === ESTILOS DAS ABAS (Padrão do Projeto Anterior) === */
@@ -67,6 +72,7 @@
             border-bottom: 3px solid transparent;
             transition: color 0.3s ease, border-color 0.3s ease;
             text-shadow: none; /* Remove sombra do texto para a aba */
+            cursor: pointer;
         }
         .tab-button:hover {
             color: var(--cinza-claro);
@@ -105,6 +111,39 @@
         .fade-in {
             animation: fadeIn 0.8s ease-out forwards;
         }
+
+        /* === NOVOS ESTILOS (Importados do Plano de Ação) === */
+        
+        /* Estilo para a caixa de conteúdo do novo relatório */
+        .content-box {
+            background-color: rgba(17, 24, 39, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 2rem; /* p-8 */
+        }
+
+        /* Estilo para a tabela do novo relatório */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        th, td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        th {
+            background-color: rgba(255, 255, 255, 0.05);
+            font-weight: 600;
+            color: var(--cinza-claro);
+        }
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        /* Fim dos novos estilos */
     </style>
 </head>
 <body class="bg-brand-dark">
@@ -119,7 +158,8 @@
         </div>
     </header>
 
-    <main class="pt-32"> <section class="container mx-auto px-4 md:px-16 fade-in">
+    <main class="pt-32"> 
+        <section class="container mx-auto px-4 md:px-16 fade-in">
             
             <div class="flex flex-wrap border-b" style="border-bottom-color: var(--border-color);">
                 <button class="tab-button active" data-tab-target="#tab-proposta">
@@ -133,6 +173,10 @@
                 <button class="tab-button" data-tab-target="#tab-rh">
                     <i data-lucide="users" class="inline-block w-4 h-4 mr-1"></i>
                     RH | Guia de Entrevista
+                </button>
+                <button class="tab-button" data-tab-target="#tab-mapeamento">
+                    <i data-lucide="user-check" class="inline-block w-4 h-4 mr-1"></i>
+                    Mapeamento de Funções
                 </button>
             </div>
 
@@ -165,6 +209,160 @@
                                 title="RH Plur | Guia de Entrevista" 
                                 loading="lazy">
                         </iframe>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tab-mapeamento">
+                    <div class="content-box"> <h2 class="text-3xl font-bold text-brand-green mb-4">1. Sumário Executivo</h2>
+                        <p class="mb-4 text-gray-300">Este documento apresenta o mapeamento das funções, rotinas e processos (AS-IS) sob responsabilidade da colaboradora Ana, atuante na recepção da Plur há aproximadamente um mês. A análise, baseada na transcrição da entrevista, identifica a colaboradora como um ativo com potencial de vendas e forte percepção da cultura de acolhimento da Plur.</p>
+                        <p class="mb-4 text-gray-300">No entanto, o diagnóstico revela gargalos críticos que limitam sua performance e a eficiência operacional. As principais lacunas sistêmicas são:</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Ausência de Processo de Vendas Estruturado:</strong> O funil de vendas é fragmentado, transferindo a responsabilidade da venda ao professor, o que gera insegurança e baixa conversão em etapas-chave (notadamente WhatsApp).</li>
+                            <li><strong>Falhas Graves de Comunicação Interna:</strong> A falta de briefings proativos (promoções, políticas) e a ausência de um <em>handoff</em> padronizado de informações entre gestores e recepção resultam em perda de tempo, retrabalho e risco de perda de vendas.</li>
+                            <li><strong>Ambiguidade na Padronização:</strong> A falta da definição de um "tom de voz" (equilíbrio entre formalidade e informalidade) e de scripts de atendimento gera hesitação na colaboradora.</li>
+                            <li><strong>Fragmentação de Processos Auxiliares:</strong> Os fluxos de Fisioterapia e Capoeira operam de forma isolada, com brechas de comunicação (uso de WhatsApp pessoal) que minam a centralização do atendimento.</li>
+                        </ul>
+                        <p class="text-gray-300">O relatório detalha esses pontos e sugere ações corretivas focadas na padronização, treinamento e centralização da comunicação.</p>
+
+                        <h2 class="text-3xl font-bold text-brand-green mt-10 mb-4">2. Perfil da Colaboradora</h2>
+                        <ul class="list-none space-y-2 mb-4 text-gray-300">
+                            <li><strong>Colaboradora:</strong> Ana.</li>
+                            <li><strong>Tempo na Empresa:</strong> 1 mês (desde Outubro/2025).</li>
+                            <li><strong>Função Percebida:</strong> Recepção, Vendas e Pós-Venda (Manutenção de Alunos).</li>
+                            <li><strong>Background Profissional:</strong> Fisioterapeuta (formada há 5 anos), com experiência prévia em estúdios de Pilates.</li>
+                            <li><strong>Background Contextual:</strong> Possui vivência prévia em vendas E2E (de ponta a ponta), onde era responsável por agendar, conduzir a aula experimental e fechar a venda de Pilates. Também possui histórico familiar ligado a vendas.</li>
+                            <li><strong>Perfil Comportamental (Autodeclarado):</strong> Relacional e observadora ("precisa observar o ambiente para se aproximar"), em oposição a um perfil "persuasivo" ou "closer" imediato. Valoriza a clareza e prefere perguntar a executar com dúvidas.</li>
+                        </ul>
+
+                        <h2 class="text-3xl font-bold text-brand-green mt-10 mb-4">3. Mapeamento de Funções e Rotinas (AS-IS)</h2>
+                        <p class="mb-4 text-gray-300">As atividades de Ana estão divididas em três linhas de serviço principais, além das tarefas gerais de recepção.</p>
+                        
+                        <div class="overflow-x-auto">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Serviço/Área</th>
+                                        <th>Mapeamento da Rotina e Processo (AS-IS)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="font-semibold align-top">Crossfit (Vendas)</td>
+                                        <td class="text-gray-300">
+                                            <ol class="list-decimal list-inside space-y-1">
+                                                <li><strong>Atendimento (WhatsApp/Presencial):</strong> Recebe o primeiro contato.</li>
+                                                <li><strong>Qualificação:</strong> Questiona sobre lesões e experiência prévia.</li>
+                                                <li><strong>Apresentação (Presencial):</strong> Apresenta o espaço físico (box, banheiros).</li>
+                                                <li><strong>Agendamento:</strong> Marca a aula experimental.</li>
+                                                <li><strong>Handoff (Interno):</strong> Repassa as informações de qualificação ao professor.</li>
+                                                <li><strong>Venda (Professor):</strong> O professor conduz a aula (identificada por Ana como o "momento da venda").</li>
+                                                <li><strong>Fechamento (Recepção):</strong> O aluno retorna à recepção para que Ana apresente os planos e finalize a matrícula.</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold align-top">Fisioterapia (Adm.)</td>
+                                        <td class="text-gray-300">
+                                            <ol class="list-decimal list-inside space-y-1">
+                                                <li><strong>Agendamento:</strong> Confirma os pacientes para os três fisioterapeutas.</li>
+                                                <li><strong>Financeiro (Parcial):</strong> Recebe pagamentos de "recover" e repassa comprovantes.</li>
+                                                <li><strong>Ponto de Falha (Identificado):</strong> Não possui informações sobre o fluxo financeiro completo (ex: "Posso pagar a sessão aqui?").</li>
+                                                <li><strong>Ponto de Falha (Identificado):</strong> Leads do WhatsApp "morrem" após a explicação dos valores (processo de precificação complexo e sem script de contorno de objeção).</li>
+                                                <li><strong>Ponto de Falha (Identificado):</strong> Conflito de canais; pacientes tratam agendamentos com a Fisioterapeuta (Denise) em seu WhatsApp pessoal, ignorando as confirmações de Ana.</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold align-top">Capoeira (Adm.)</td>
+                                        <td class="text-gray-300">
+                                            <ol class="list-decimal list-inside space-y-1">
+                                                <li><strong>Informação:</strong> Comunica horários e valores.</li>
+                                                <li><strong>Handoff (Externo):</strong> Direciona o interessado diretamente ao professor responsável para fechamento e pagamento.</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold align-top">Recepção (Geral)</td>
+                                        <td class="text-gray-300">
+                                            <ol class="list-decimal list-inside space-y-1">
+                                                <li><strong>Acolhimento:</strong> Oferece água e café.</li>
+                                                <li><strong>Gestão de Ambiente:</strong> Recepciona fornecedores e prestadores de serviço (ex: "cara do telhado").</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="text-3xl font-bold text-brand-green mt-10 mb-4">4. Diagnóstico de Processos e Insights</h2>
+                        <p class="mb-6 text-gray-300">A análise da transcrição revela quatro áreas principais de ineficiência sistêmica.</p>
+
+                        <h3 class="text-2xl font-semibold text-white mb-3">4.1. GAP 1: Ineficiência do Funil de Vendas (Ausência de Padrão)</h3>
+                        <p class="mb-4 text-gray-300">O maior ponto de atrito para a colaboradora é a falta de controle sobre o processo de venda, em contraste direto com sua experiência anterior (Pilates).</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Funil Fragmentado:</strong> Ana sente que sua função é "parcial". Ela aquece o lead, mas a venda <em>de facto</em> ocorre na aula experimental, sobre a qual ela não tem controle. Ela retoma o processo no fechamento (preenchimento de planos), gerando uma quebra de <em>rapport</em>.</li>
+                            <li><strong>Insegurança no WhatsApp:</strong> A maior dificuldade relatada é a comunicação por WhatsApp. Ela não possui scripts ou técnicas para "não deixar a conversa morrer" ou "dar uma brecha para a pessoa falar não". Sua experiência anterior era baseada em treinamentos de vendas e alinhamentos constantes, que são inexistentes na Plur.</li>
+                            <li><strong>Falta de Ferramentas de Fechamento:</strong> Não há um processo claro para contornar objeções de preço (especialmente na Fisioterapia) ou para conduzir o lead do "interesse" para o "agendamento experimental".</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">4.2. GAP 2: Falha Crítica na Comunicação Interna (Reativo vs. Proativo)</h3>
+                        <p class="mb-4 text-gray-300">A colaboradora opera de forma "reativa", sendo forçada a buscar informações em tempo real, muitas vezes na frente do cliente.</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Falta de Briefing (Promoções):</strong> O exemplo da promoção "PLUR30" é crítico. Um cliente perguntou sobre a diferença do plano, e Ana ("que tinha a mesma dúvida") precisou correr para perguntar ao T. durante a aula. Isso demonstra que a linha de frente não é informada <em>antes</em> do lançamento de novas ofertas.</li>
+                            <li><strong>Falta de Briefing (Políticas):</strong> O caso da aluna que desejava cancelar o plano. Ana não sabia o procedimento. O gestor (T.) assumiu a situação, mas não repassou o <em>conhecimento</em> (o "o que fazer se acontecer de novo") para Ana, deixando o processo vulnerável.</li>
+                            <li><strong>Handoff de Conversa Inexistente:</strong> Gestores (Alani/T.) iniciam atendimentos no WhatsApp, pausam, e Ana "pega a conversa no meio" (ex: conversa das 11h vista às 13h30), sem saber o contexto, o que foi resolvido, ou como continuar, gerando latência na resposta ao cliente.</li>
+                            <li><strong>Comunicação Operacional:</strong> A falta de aviso sobre visitas de manutenção (ex: "cara do telhado") gera insegurança e quebra no fluxo da recepção.</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">4.3. GAP 3: Ambiguidade no Tom de Voz e Atendimento</h3>
+                        <p class="mb-4 text-gray-300">Existe um conflito entre a expectativa da gestão e o perfil da colaboradora, sem um padrão definido.</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Gestão (T.):</strong> Deseja um atendimento "mais aberto", "liberal", "closer" e menos formal.</li>
+                            <li><strong>Perfil (Ana):</strong> É naturalmente mais observadora, relacional e acostumada a uma venda técnica (Fisioterapia).</li>
+                            <li><strong>O Vácuo:</strong> Ana está insegura sobre como dosar a informalidade ("às vezes acho que tô invasiva demais"). Ela reconhece a necessidade de um ambiente humano (proposta de valor da Plur), mas sente falta de um "padrão de atendimento" – como o exemplo do Outback, que usa a informalidade de forma <em>padronizada</em> e <em>treinada</em>.</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">4.4. GAP 4: Fragmentação dos Processos de Serviços (Fisio/Capoeira)</h3>
+                        <p class="mb-4 text-gray-300">Os serviços auxiliares operam como "negócios" separados dentro da recepção, minando a eficiência.</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Conflito de Canal (Fisio):</strong> O fato da Fisioterapeuta Denise utilizar seu WhatsApp pessoal para agendamentos cria uma "brecha" no processo. Isso impede Ana de realizar seu trabalho (confirmação centralizada) e enfraquece o controle da empresa sobre o histórico do cliente.</li>
+                            <li><strong>Processo Desinvestigado (Fisio):</strong> Há uma hipótese (de Ana) de que a evasão de leads na Fisio se deve ao valor ou à complexidade da explicação dos pacotes. No entanto, este é um "achismo" não validado; o processo de venda da Fisioterapia não está sendo medido ou otimizado.</li>
+                        </ul>
+
+                        <h2 class="text-3xl font-bold text-brand-green mt-10 mb-4">5. Recomendações Imediatas (Plano de Ação)</h2>
+                        <p class="mb-6 text-gray-300">Com base no diagnóstico de processos, as seguintes ações são recomendadas para estruturação:</p>
+
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-white mb-2">Desenvolvimento de Playbook de Vendas (WhatsApp):</h3>
+                                <p class="text-gray-300 mb-2"><strong>Ação:</strong> Criar scripts claros para as 3 fases da conversa no WhatsApp:</p>
+                                <ul class="list-decimal list-inside ml-4 space-y-1 text-gray-300">
+                                    <li>Abertura/Qualificação.</li>
+                                    <li>Contorno de Objeções (Preço, Tempo, etc.).</li>
+                                    <li>Engajamento/Agendamento (Foco em "não deixar a conversa morrer", usando ganchos para a aula experimental).</li>
+                                </ul>
+                                <p class="text-gray-300 mt-2"><strong>Objetivo:</strong> Dar segurança e ferramentas táticas para Ana aumentar a conversão de leads em aulas experimentais.</p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-2xl font-semibold text-white mb-2">Criação de Protocolo de Comunicação Interna:</h3>
+                                <p class="text-gray-300 mb-2"><strong>Ação:</strong> Instituir a regra de que <em>toda</em> nova promoção, mudança de preço ou política (ex: cancelamento) DEVE ser comunicada à recepção via briefing (mesmo que um áudio curto) <em>antes</em> de ser lançada ao público.</p>
+                                <p class="text-gray-300 mt-2"><strong>Objetivo:</strong> Garantir que a linha de frente tenha as informações corretas, reduzindo o tempo de espera do cliente e o retrabalho.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-2xl font-semibold text-white mb-2">Padronização do Tom de Voz (Treinamento):</h3>
+                                <p class="text-gray-300 mb-2"><strong>Ação:</strong> Realizar um alinhamento (workshop) para definir o "Padrão Plur de Atendimento": o equilíbrio entre "acolhedor/informal" e "eficiente/profissional".</p>
+                                <p class="text-gray-300 mt-2"><strong>Objetivo:</strong> Reduzir a ambiguidade e dar confiança para Ana se comunicar dentro da cultura esperada pela gestão.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-2xl font-semibold text-white mb-2">Centralização de Canais (Política):</h3>
+                                <p class="text-gray-300 mb-2"><strong>Ação:</strong> Definir como política que <em>todo</em> atendimento ao cliente (incluindo Fisioterapia) deve ser centralizado no número do WhatsApp Business da Plur. Contatos pessoais devem ser educadamente redirecionados para o canal oficial.</p>
+                                <p class="text-gray-300 mt-2"><strong>Objetivo:</strong> Eliminar a "brecha" de comunicação, garantir o <em>handoff</em> correto das conversas e manter o histórico do cliente em um único local.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
