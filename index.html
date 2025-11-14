@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Variáveis de Cores e Fontes da PLUR (extraído do seu arquivo) */
+        /* Variáveis de Cores e Fontes da PLUR */
         :root {
             --azul-petroleo: #06192a;
             --verde-vibrante: #00e800;
@@ -18,7 +18,7 @@
             --branco: #ffffff;
             --font-primaria: 'Poppins', sans-serif;
             --font-secundaria: 'Merriweather', serif;
-            --border-color: rgba(255, 255, 255, 0.1); /* Adicionado para consistência */
+            --border-color: rgba(255, 255, 255, 0.1); 
         }
 
         /* Estilos Globais do Body com Textura PLUR */
@@ -54,7 +54,7 @@
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        /* Removido o 'div' da sombra de texto para evitar conflitos */
+        
         p, li, span, td, th {
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         }
@@ -63,7 +63,7 @@
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
         }
 
-        /* === ESTILOS DAS ABAS (Padrão do Projeto Anterior) === */
+        /* === ESTILOS DAS ABAS === */
         .tab-button {
             padding: 12px 20px;
             font-size: 1rem;
@@ -88,7 +88,7 @@
             display: block;
         }
         
-        /* === ESTILOS DO IFRAME (Padrão do Projeto Anterior) === */
+        /* === ESTILOS DO IFRAME === */
         .iframe-wrapper {
             width: 100%;
             height: 100vh; /* 100% da altura da tela */
@@ -112,7 +112,7 @@
             animation: fadeIn 0.8s ease-out forwards;
         }
 
-        /* === NOVOS ESTILOS (Importados do Plano de Ação) === */
+        /* === ESTILOS DOS RELATÓRIOS === */
         
         /* Estilo para a caixa de conteúdo do novo relatório */
         .content-box {
@@ -183,10 +183,14 @@
                     <i data-lucide="user-check" class="inline-block w-4 h-4 mr-1"></i>
                     Mapeamento de Funções
                 </button>
-                <!-- BOTÃO DA NOVA ABA ADICIONADO AQUI -->
                 <button class="tab-button" data-tab-target="#tab-asis-theo">
                     <i data-lucide="clipboard-list" class="inline-block w-4 h-4 mr-1"></i>
                     Relatório AS-IS (Theo)
+                </button>
+                <!-- BOTÃO DA NOVA ABA ADICIONADO -->
+                <button class="tab-button" data-tab-target="#tab-sop-recepcao">
+                    <i data-lucide="swatch-book" class="inline-block w-4 h-4 mr-1"></i>
+                    SOP Recepção (TO-BE)
                 </button>
             </div>
 
@@ -305,7 +309,7 @@
                 </div>
                 <div class="tab-content" id="tab-mapeamento">
                     <div class="content-box"> <h2 class="text-3xl font-bold text-brand-green mb-4">1. Sumário Executivo</h2>
-                        <p class="mb-4 text-gray-300">Este documento apresenta o mapeamento das funções, rotinas e processos (AS-IS) sob responsabilidade da colaboradora Ana, atuante na recepção da Plur há aproximadamente um mês. A análise, baseada na transcrição da entrevista, identifica a colaboradora como um ativo com potencial de vendas e forte percepção da cultura de acolhimento da Plur.</p>
+                        <p class="mb-4 text-gray-300">Este documento apresenta o mapeamento das funções, rotinas e processos (AS-IS) sob responsabilidade da colaboradora Ana, atuante na recepção da Plur há approximately um mês. A análise, baseada na transcrição da entrevista, identifica a colaboradora como um ativo com potencial de vendas e forte percepção da cultura de acolhimento da Plur.</p>
                         <p class="mb-4 text-gray-300">No entanto, o diagnóstico revela gargalos críticos que limitam sua performance e a eficiência operacional. As principais lacunas sistêmicas são:</p>
                         <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
                             <li><strong>Ausência de Processo de Vendas Estruturado:</strong> O funil de vendas é fragmentado, transferindo a responsabilidade da venda ao professor, o que gera insegurança e baixa conversão em etapas-chave (notadamente WhatsApp).</li>
@@ -409,7 +413,7 @@
                         <p class="mb-4 text-gray-300">Existe um conflito entre a expectativa da gestão e o perfil da colaboradora, sem um padrão definido.</p>
                         <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
                             <li><strong>Gestão (T.):</strong> Deseja um atendimento "mais aberto", "liberal", "closer" e menos formal.</li>
-                            <li><strong>Perfil (Ana):</strong> É naturalmente mais observadora, relacional e acostumada a uma venda técnica (Fisioterapia).</li>
+                            <li><strong>Perfil (Ana):</strong> É naturally mais observadora, relacional e acostumada a uma venda técnica (Fisioterapia).</li>
                             <li><strong>O Vácuo:</strong> Ana está insegura sobre como dosar a informalidade ("às vezes acho que tô invasiva demais"). Ela reconhece a necessidade de um ambiente humano (proposta de valor da Plur), mas sente falta de um "padrão de atendimento" – como o exemplo do Outback, que usa a informalidade de forma <em>padronizada</em> e <em>treinada</em>.</li>
                         </ul>
 
@@ -457,7 +461,6 @@
                     </div>
                 </div>
 
-                <!-- CONTEÚDO DA NOVA ABA ADICIONADO AQUI -->
                 <div class="tab-content" id="tab-asis-theo">
                     <div class="content-box">
                         <h2 class="text-3xl font-bold text-brand-green mb-4">Mapeamento de Processos (AS-IS) - Entrevista Theo</h2>
@@ -523,7 +526,7 @@
                                     <li>Aula Avulsa (semana): R$ 50.</li>
                                 </ul>
                             </li>
-                            <li><strong>Sistemas:</strong> O aluno preenche o <strong>PAR-Q</strong> (Questionário de Aptidão) diretamente no aplicativo <strong>Next Fit</strong> ao se cadastrar.</li>
+                            <li><strong>Sistemas:</strong> O aluno preenche o <strong>PAR-Q</strong> (Questionário de Aptidão) directly no aplicativo <strong>Next Fit</strong> ao se cadastrar.</li>
                         </ul>
 
                         <h3 class="text-2xl font-semibold text-white mt-8 mb-3">Onboarding (Integração do Novato)</h3>
@@ -612,6 +615,109 @@
                             <li><strong>Dependência Tecnológica (Next Fit):</strong> O desejo de automação (IA) do Theo está bloqueado pela <strong>API limitada do Next Fit</strong>, que não permite retroalimentação (ex: marcar aulas via WhatsApp).</li>
                             <li><strong>Processo de Venda (Produtos):</strong> A venda de suplementos (Nutrevida) <strong>não está integrada</strong> ao app Next Fit, perdendo oportunidade de escala e gerando controle manual.</li>
                             <li><strong>Controle de Projetos (Plur 30):</strong> O acompanhamento dos treinos extras e metabólicos é feito por <strong>processos manuais</strong> (planilha física e quadro branco), aumentando o atrito para o aluno e dificultando a coleta de dados.</li>
+                        </ol>
+
+                    </div>
+                </div>
+
+                <!-- CONTEÚDO DA NOVA ABA (SOP RECEPÇÃO) -->
+                <div class="tab-content" id="tab-sop-recepcao">
+                    <div class="content-box">
+                        <h2 class="text-3xl font-bold text-brand-green mb-4">Análise de Processo (TO-BE): SOP da Recepção</h2>
+                        <p class="mb-4 text-gray-300">Este documento detalha o fluxo de trabalho, scripts e padrões de comportamento esperados para a função de Recepção e Vendas, com base nas diretrizes da gestão (Lanny).</p>
+                        
+                        <!-- Seção 1 -->
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">1. Perfil Comportamental e Postura (Obrigatório)</h3>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Perfil:</strong> "Disposta", "pronta", "ânimo", "vivacidade".</li>
+                            <li><strong>Tom de Voz:</strong> "Animado", "linguagem leve", "tom de presença" (sem ser "efusivo").</li>
+                            <li><strong>Ação Física (Proativa):</strong> A recepcionista deve <strong>levantar-se</strong> ao balcão (que é alto) para receber qualquer pessoa que entra.</li>
+                            <li><strong>Ação (Acolhimento):</strong> Saudar ativamente ("Bom dia", "Boa tarde").</li>
+                        </ul>
+
+                        <!-- Seção 2 -->
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">2. Rotina Diária (Abertura de Turno e Gestão Contínua)</h3>
+                        <ol class="list-decimal list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Conferência do Espaço Físico:</strong> Verificar a organização e limpeza da recepção.</li>
+                            <li><strong>Abertura do Sistema (Next Fit):</strong> Verificar o "Quadro de Relatório".</li>
+                            <li><strong>Monitoramento e Ação (Atividades-Chave):</strong>
+                                <ul class="list-disc list-inside ml-4 mt-1">
+                                    <li><strong>Clientes Bloqueados:</strong> Identificar o motivo (falta de assinatura, falha no pagamento) e tratar.</li>
+                                    <li><strong>Planos Próximos do Vencimento:</strong> Identificar alunos.</li>
+                                    <li><strong>Aniversariantes:</strong> Identificar para relacionamento.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Ação de Renovação (Ativa):</strong> Entrar em contato ativamente com os alunos cujos planos estão vencendo para apresentar as opções de renovação.</li>
+                        </ol>
+
+                        <!-- Seção 3 -->
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">3. Processo 1: Atendimento e Triagem (Primeiro Contato)</h3>
+                         <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Se for Aluno (Já conhecido):</strong> Saudar pelo nome.</li>
+                            <li><strong>Se for Paciente de Fisioterapia:</strong>
+                                <ul class="list-disc list-inside ml-4 mt-1">
+                                    <li>Oferecer água ou café.</li>
+                                    <li>Informar que o profissional já foi notificado e que o atendimento está próximo.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Se for Lead (Interessado no Crossfit):</strong> Iniciar o <strong>Processo 2: Funil de Vendas</strong>.</li>
+                        </ul>
+
+                        <!-- Seção 4 -->
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">4. Processo 2: Funil de Vendas (Lead de Crossfit)</h3>
+                        <p class="text-gray-300 mb-4">Processo central de conversão, seja presencial ou via WhatsApp/Instagram.</p>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">Estágio 1: Investigação (Qualificação)</h4>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                             <li><strong>Objetivo:</strong> Coletar o contexto do lead.</li>
+                             <li><strong>Script (Perguntas):</strong>
+                                  <ul class="list-disc list-inside ml-4 mt-1">
+                                      <li>"Você já treina? O que você treina?"</li>
+                                      <li>"Você já treinou Crossfit?"</li>
+                                      <li>"Há quanto tempo você está parado(a)?"</li>
+                                      <li>"O que você está procurando?"</li>
+                                      <li>"Você veio por indicação?"</li>
+                                  </ul>
+                             </li>
+                             <li><strong>Ação:</strong> Reforçar os conceitos da Plur ("aqui é para todo mundo") durante a conversa.</li>
+                        </ul>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">Estágio 2: Contorno de Objeção (Preço)</h4>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Problema:</strong> O cliente pergunta o preço immediately.</li>
+                            <li><strong>Diretriz (Regra):</strong> <strong>Tirar o foco do preço</strong>.</li>
+                            <li><strong>Ação (Script):</strong> Conduzir a conversa para a <strong>experiência</strong> e o agendamento da aula.</li>
+                        </ul>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">Estágio 3: Agendamento da Aula Experimental (Sistema)</h4>
+                        <ol class="list-decimal list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Cadastro:</strong> No Next Fit, fazer o "Cadastro de Cliente" (não "Lead").</li>
+                            <li><strong>Venda (Controle):</strong> Realizar uma "Venda" do serviço "Aula Experimental" (custo zero) para criar registro.</li>
+                            <li><strong>Agenda (Sistema):</strong> Agendar o cliente usando a opção "Cliente Especial".</li>
+                        </ol>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">Estágio 4: A Aula (Handoff para o Professor)</h4>
+                         <ol class="list-decimal list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Apresentação:</strong> A recepcionista acompanha o aluno até o espaço de treino.</li>
+                            <li><strong>Handoff de Informação (Crítico):</strong> Passar um breve perfil do aluno ao professor (ex: "Professor, este é o Cléber, está parado há 6 meses").</li>
+                            <li><strong>Follow-up (se agendado):</strong> Manter contato via WhatsApp (ex: "E aí, preparado para sua aula amanhã?").</li>
+                        </ol>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">Estágio 5: Pós-Aula (Fechamento da Venda)</h4>
+                         <ol class="list-decimal list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Abordagem Ativa:</strong> Abordar o aluno <strong>imediatamente</strong> quando ele sai da aula.</li>
+                            <li><strong>Feedback:</strong> "E aí, gostou? O que achou?"</li>
+                            <li><strong>Fechamento (Script):</strong> Apresentar os planos e conduzir a venda ativamente (ex: "Qual plano vamos fazer?").</li>
+                        </ol>
+
+                        <!-- Seção 5 -->
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">5. Processo 3: Pós-Venda (Onboarding do Novo Aluno)</h3>
+                        <ol class="list-decimal list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Sistema (Pagamento):</strong> Enviar link do app Next Fit e orientar o aluno a cadastrar o cartão *por lá*. Efetivar a venda.</li>
+                            <li><strong>Orientação (Operacional):</strong> Explicar o uso do app (check-in) e realizar o **cadastro do acesso facial** na catraca.</li>
+                            <li><strong>Comunidade (Onboarding Social):</strong> Adicionar o aluno no grupo de WhatsApp e enviar mensagem de boas-vindas.</li>
+                            <li><strong>Follow-up (Relacionamento Inicial):</strong> Nas primeiras semanas, manter contato próximo e perguntar sobre dores/adaptação.</li>
+                            <li><strong>Upsell (Venda Cruzada):</strong> Usar a "dor" do aluno como gancho para a venda de serviços de fisioterapia (ex: "Temos o recover...").</li>
                         </ol>
 
                     </div>
