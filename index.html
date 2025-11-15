@@ -54,7 +54,7 @@
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        
+       
         p, li, span, td, th {
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         }
@@ -87,7 +87,7 @@
         .tab-content.active {
             display: block;
         }
-        
+       
         /* === ESTILOS DO IFRAME === */
         .iframe-wrapper {
             width: 100%;
@@ -113,7 +113,7 @@
         }
 
         /* === ESTILOS DOS RELATÓRIOS === */
-        
+       
         /* Estilo para a caixa de conteúdo do novo relatório */
         .content-box {
             background-color: rgba(17, 24, 39, 0.95) !important;
@@ -160,7 +160,7 @@
 
     <main class="pt-32"> 
         <section class="container mx-auto px-4 md:px-16 fade-in">
-            
+           
             <div class="flex flex-wrap border-b" style="border-bottom-color: var(--border-color);">
                 <button class="tab-button active" data-tab-target="#tab-proposta">
                     <i data-lucide="file-text" class="inline-block w-4 h-4 mr-1"></i>
@@ -174,7 +174,7 @@
                     <i data-lucide="users" class="inline-block w-4 h-4 mr-1"></i>
                     RH | Guia de Entrevista
                 </button>
-                
+               
                 <button class="tab-button" data-tab-target="#tab-vaga">
                     <i data-lucide="megaphone" class="inline-block w-4 h-4 mr-1"></i>
                     RH | Anúncio de Vaga
@@ -187,7 +187,14 @@
                     <i data-lucide="clipboard-list" class="inline-block w-4 h-4 mr-1"></i>
                     Relatório AS-IS (Theo)
                 </button>
-                <!-- BOTÃO DA NOVA ABA ADICIONADO -->
+                
+                <!-- === BOTÃO DA NOVA ABA (LANE) ADICIONADO === -->
+                <button class="tab-button" data-tab-target="#tab-asis-lane">
+                    <i data-lucide="clipboard-list" class="inline-block w-4 h-4 mr-1"></i>
+                    Relatório AS-IS (Lane)
+                </button>
+                <!-- === FIM DO BOTÃO === -->
+                
                 <button class="tab-button" data-tab-target="#tab-sop-recepcao">
                     <i data-lucide="swatch-book" class="inline-block w-4 h-4 mr-1"></i>
                     SOP Recepção (TO-BE)
@@ -195,7 +202,7 @@
             </div>
 
             <div class="mt-6">
-                
+               
                 <div class="tab-content active" id="tab-proposta">
                     <div class="iframe-wrapper">
                         <iframe class="iframe-content" 
@@ -229,12 +236,12 @@
                 <div class="tab-content" id="tab-vaga">
                     <div class="content-box">
                         <h2 class="text-3xl font-bold text-brand-green mb-4">🌟 Anúncio de Vaga: Recepcionista / Vendedor(a)</h2>
-                        
+                       
                         <h3 class="text-2xl font-semibold text-white mt-10 mb-3">Sobre Nós:</h3>
                         <p class="mb-4 text-gray-300">Somos um espaço de treino focado em oferecer uma experiência de CrossFit diferenciada, onde também integramos services de fisioterapia. Nosso ambiente valoriza a energia, a proatividade e um atendimento que vai além do básico. Estamos buscando uma pessoa para ser a linha de frente da nossa recepção, combinando excelência no atendimento com habilidade para converter visitantes em membros da nossa comunidade.</p>
 
                         <h3 class="text-2xl font-semibold text-white mt-10 mb-3">Suas Responsabilidades (O que você fará):</h3>
-                        
+                       
                         <p class="text-gray-200 font-semibold text-lg mt-6 mb-2">Rotina Diária e Gestão de Sistema:</p>
                         <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
                             <li>Iniciar o dia abrindo o sistema e verificando o quadro de relatórios.</li>
@@ -269,7 +276,7 @@
                         </ul>
 
                         <h3 class="text-2xl font-semibold text-white mt-10 mb-3">O que buscamos (Requisitos Obrigatórios):</h3>
-                        
+                       
                         <p class="text-gray-200 font-semibold text-lg mt-6 mb-2">Perfil Comportamental:</p>
                         <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
                             <li>Uma postura "disposta" e "pronta".</li>
@@ -331,7 +338,7 @@
 
                         <h2 class="text-3xl font-bold text-brand-green mt-10 mb-4">3. Mapeamento de Funções e Rotinas (AS-IS)</h2>
                         <p class="mb-4 text-gray-300">As atividades de Ana estão divididas em três linhas de serviço principais, além das tarefas gerais de recepção.</p>
-                        
+                       
                         <div class="overflow-x-auto">
                             <table>
                                 <thead>
@@ -438,7 +445,7 @@
                                 </ul>
                                 <p class="text-gray-300 mt-2"><strong>Objetivo:</strong> Dar segurança e ferramentas táticas para Ana aumentar a conversão de leads em aulas experimentais.</p>
                             </div>
-                            
+                           
                             <div>
                                 <h3 class="text-2xl font-semibold text-white mb-2">Criação de Protocolo de Comunicação Interna:</h3>
                                 <p class="text-gray-300 mb-2"><strong>Ação:</strong> Instituir a regra de que <em>toda</em> nova promoção, mudança de preço ou política (ex: cancelamento) DEVE ser comunicada à recepção via briefing (mesmo que um áudio curto) <em>antes</em> de ser lançada ao público.</p>
@@ -468,7 +475,7 @@
                         <p class="mb-4 text-gray-300">O mapeamento abaixo estrutura a rotina atual (AS-IS) com base nas funções mencionadas e nas correções fornecidas.</p>
 
                         <h2 class="text-3xl font-bold text-brand-green mt-10 mb-4">1. Função: Operações e Rotina Diária</h2>
-                        
+                       
                         <h3 class="text-2xl font-semibold text-white mt-8 mb-3">Abertura (Ex: Segunda-feira)</h3>
                         <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
                             <li><strong>Responsável:</strong> <strong>Átila</strong> (Professor).</li>
@@ -620,12 +627,139 @@
                     </div>
                 </div>
 
+                <!-- === CONTEÚDO DA NOVA ABA (LANE) ADICIONADO === -->
+                <div class="tab-content" id="tab-asis-lane">
+                    <div class="content-box">
+                        <h2 class="text-3xl font-bold text-brand-green mb-4">Análise Detalhada das Funções "As Is" (Lane)</h2>
+                        
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">1. Rotina e Funções de Lane (Lan)</h3>
+                        <p class="mb-4 text-gray-300">Lane acumula responsabilidades estratégicas e operacionais, atuando como sócia e especificamente nas áreas de Marketing e Recepção.</p>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">1.1. Recepção e Operações (Manhã)</h4>
+                        <p class="mb-4 text-gray-300">Lane supre a demanda da recepção no período da manhã.</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Horário:</strong> Lane chega por volta das 7:00, ou "sete e pouco". O horário de abertura da academia é às 6:00, o que deixa uma hora descoberta (das 6:00 às 7:00). O ideal seria chegar às 7:00 ou um pouco antes, pois a aula começa às 6:00 e termina às 7:15.</li>
+                            <li><strong>Atividades Diárias:</strong>
+                                <ol class="list-decimal list-inside ml-4 mt-1 space-y-1">
+                                    <li>Abrir o computador e verificar o sistema (rotina de recepção).</li>
+                                    <li>Verificar alunos bloqueados (motivo: vencimento de plano ou falta de assinatura de contrato) e o porquê do bloqueio.</li>
+                                    <li>Dar orientação próxima aos alunos para evitar bloqueio por assinatura de contrato.</li>
+                                    <li>Monitorar os acessos na catraca e o check-in.</li>
+                                    <li>Verificar ocorrências de acesso no período anterior (coberto pela recepcionista).</li>
+                                    <li>Fazer compras pontuais de material de limpeza, mediante solicitação da funcionária.</li>
+                                    <li>Supervisão e direcionamento da limpeza.</li>
+                                </ol>
+                            </li>
+                        </ul>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">1.2. Sistema e Implementação (Demanda Exclusiva)</h4>
+                        <p class="mb-4 text-gray-300">Lane é a principal responsável pela implantação e configuração do novo sistema, transicionado em setembro.</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Status Atual:</strong> A parte mais geral (cobrança, contratos, planos, alteração de valores) está pronta. Todos os alunos já foram cadastrados no novo sistema.</li>
+                            <li><strong>Atividades de Gestão do Sistema:</strong>
+                                <ol class="list-decimal list-inside ml-4 mt-1 space-y-1">
+                                    <li>Alimentar o sistema com planos, contratos e alterações de tabela.</li>
+                                    <li>Estudo contínuo do sistema e descoberta de funcionalidades (em curso desde setembro).</li>
+                                    <li>Configurar a automação (CRM), que estava desativada. Ela ligou mensagens para alunos faltantes (após uma semana) e aniversariantes, e religou a integração com o WhatsApp.</li>
+                                    <li>Configuração de Recorrência: Recebe os dados de cartão que o aluno cadastra no aplicativo (sem acesso aos dados completos) e utiliza essa informação para vender o plano na recorrência no sistema administrador.</li>
+                                </ol>
+                            </li>
+                            <li><strong>Gaps e Próximos Passos (Sistema):</strong>
+                                <ol class="list-decimal list-inside ml-4 mt-1 space-y-1">
+                                    <li>A automação financeira (cobrança/mensagens) ainda não foi configurada.</li>
+                                    <li>O relatório financeiro no sistema está "completamente parado, não foi mexido".</li>
+                                    <li>A configuração de renovação e reajuste de valores dos planos ainda não está bem estabelecida, forçando a criação de novos contratos (trabalho "mais primário") em vez de programar o reajuste.</li>
+                                    <li>Implementar a funcionalidade de rede social/timeline no aplicativo para comunicação de avisos (ex: aulão de sábado), pois informações se perdem no grupo de WhatsApp.</li>
+                                </ol>
+                            </li>
+                        </ul>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">1.3. Marketing e Branding (Supervisão)</h4>
+                        <p class="mb-4 text-gray-300">Lane tem um papel de direcionamento e supervisão do marketing, motivada por sua identificação com a área de branding.</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Estratégia de Transição:</strong> O Marketing está em transição, buscando formar uma equipe que comunique a cultura única da Plur (alternativa, disruptiva, ligada à arte).</li>
+                            <li><strong>Designer (Lara):</strong> Contratada (artista visual/designer gráfica da comunidade alternativa). Ela está ativa na produção de materiais gráficos para o projeto PL 30. O combinado são três materiais por semana, mas a entrega está baixa.</li>
+                            <li><strong>Social Media:</strong> A antiga social media está em processo de saída (prevista até início de dezembro), mas ainda faz alguns materiais (ex: Black Friday).</li>
+                            <li><strong>Nova Candidata (Marina):</strong> Identificada e muito bem avaliada. Marina apresentou uma proposta completa, com entrega de material para sete dias na semana. O alinhamento atual é definir se Marina absorve as demandas da Lara (que ficaria por demanda) para gerenciar o investimento.</li>
+                            <li><strong>Função de Lane:</strong> Fazer o direcionamento, supervisionar e aprovar o conteúdo, garantindo que ele comunique a marca e o conceito ("refinar" a imagem da Plur).</li>
+                            <li><strong>Tráfego Pago:</strong> É considerado de extrema importância, mas só será iniciado após a imagem ser refinada e houver material coerente e intencional suficiente.</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">2. Gestão de Pessoas e Cultura (Recursos Humanos)</h3>
+                        <p class="mb-4 text-gray-300">A gestão de pessoas é vista sob a ótica da cultura da Plur (presença, acolhimento, constância, respeito). A Plur não tolera reclamações, fofocas ou desmotivação entre colaboradores e alunos.</p>
+                        
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">2.1. Recepcionista (Ana)</h4>
+                        <p class="mb-4 text-gray-300">A recepcionista atual foi inicialmente contratada com um perfil não adequado (introspectiva/tímida) para a função de frente.</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Ajuste de Processo:</strong> Para lidar com a desmotivação e confusão, Lane implementou um roteiro/processo de tarefas utilizando um Kanban no Trello.</li>
+                            <li><strong>Evolução:</strong> A recepcionista evoluiu comportamentalmente e está se sentindo realizada por conseguir cumprir as tarefas. Ela segue o roteiro e está melhorando a comunicação com os clientes via mensagens.</li>
+                            <li><strong>Desafios:</strong> Necessidade de contratação de mais uma pessoa para cobrir horários e preencher o perfil ideal de expansividade.</li>
+                            <li><strong>Treinamento Pendente:</strong> Necessidade de treinamento aprofundado para a recepcionista lidar com os diferentes públicos que utilizam a recepção (alunos de crossfit, clientes da fisioterapia — que requerem espera e mais atenção —, e capoeira).</li>
+                        </ul>
+
+                        <h4 class="text-xl font-semibold text-white mt-6 mb-2">2.2. Limpeza (Milene)</h4>
+                        <p class="mb-4 text-gray-300">A limpeza é citada como um desafio operacional.</p>
+                        <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
+                            <li><strong>Frequência:</strong> A limpeza é realizada atualmente apenas duas vezes por semana.</li>
+                            <li><strong>Problema:</strong> A frequência não é suficiente, gerando reclamações, especialmente da capoeira (que treina com roupa branca no chão) e da fisioterapia.</li>
+                            <li><strong>Status:</strong> A funcionária atual não tem disponibilidade para fazer a manutenção diariamente (cinco vezes por semana). Estão em busca (de forma não incisiva) de outra pessoa.</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">3. Outras Áreas e Operações</h3>
+                        <div class="overflow-x-auto">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Área</th>
+                                        <th>Status "As Is"</th>
+                                        <th>Gestão/Responsabilidade</th>
+                                        <th>Gaps/Próximos Passos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="font-semibold align-top">Financeiro/Fiscal</td>
+                                        <td class="text-gray-300">Completamente parado no sistema.</td>
+                                        <td class="text-gray-300">Responsabilidade de Morgana (futuramente). Lane teve contato pontual com o rapaz da contabilidade.</td>
+                                        <td class="text-gray-300">Nenhuma automação de cobrança configurada.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold align-top">Check-in/Catraca</td>
+                                        <td class="text-gray-300">O aluno usa o aplicativo (instalado e orientado no momento da matrícula) para agendar aulas com 24h de antecedência. A catraca só libera (facial) se o check-in for feito.</td>
+                                        <td class="text-gray-300">Lane configura os limites de cancelamento e check-in (ex: até 10 minutos após o início da aula).</td>
+                                        <td class="text-gray-300">Processo de educação dos alunos antigos sobre a necessidade de check-in. Precisa implementar o limite de 15 alunos por aula no sistema.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold align-top">Treinamento (WOD)</td>
+                                        <td class="text-gray-300">O treino do dia (WOD) é lançado no sistema pelo Té e aparece no aplicativo. Também é escrito em um quadro na hora da aula.</td>
+                                        <td class="text-gray-300">Té.</td>
+                                        <td class="text-gray-300">Nível de interação dos alunos com a aba do treino no aplicativo é baixo.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold align-top">Parcerias</td>
+                                        <td class="text-gray-300">Fundamentais para a Plur, pois reforçam a identidade de "movimento do corpo" e não apenas crossfit. Parceiros atuais incluem o projeto Corre Lento e eventos de domingo/PL 30.</td>
+                                        <td class="text-gray-300">Lane vê o potencial de expandir as parcerias e atividades (yoga, capoeira) para construir a comunidade.</td>
+                                        <td class="text-gray-300">Pensar em parcerias mais frequentes fora do projeto PL 30.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <hr style="border-color: var(--border-color); margin-top: 2.5rem; margin-bottom: 2.5rem;">
+
+                        <h3 class="text-2xl font-semibold text-white mt-8 mb-3">Resumo do "As Is":</h3>
+                        <p class="mb-4 text-gray-300">A Plur Movimento está em uma fase intensa de transição e reestruturação. O sistema foi implementado recentemente (setembro) e Lane está ativamente configurando as funcionalidades essenciais, especialmente automação e cadastros, mas o financeiro ainda é um grande gargalo. O Marketing está sendo refinado para ser mais intencional e alinhado à cultura da marca, com a Marina em avaliação para a função de Social Media. A Recepção melhorou o desempenho com a introdução de processos claros (Kanban), mas sofre com a falta de cobertura horária e a limpeza necessita urgentemente de aumento de frequência. O principal risco para Lane e a operação no curto prazo é o cansaço devido ao acúmulo de funções (Recepção, Sistema e Supervisão de Marketing) e a impossibilidade de delegar essas atividades durante a licença paternidade do Theo.</p>
+                    </div>
+                </div>
+                <!-- === FIM DO NOVO CONTEÚDO === -->
+
+
                 <!-- CONTEÚDO DA NOVA ABA (SOP RECEPÇÃO) -->
                 <div class="tab-content" id="tab-sop-recepcao">
                     <div class="content-box">
                         <h2 class="text-3xl font-bold text-brand-green mb-4">Análise de Processo (TO-BE): SOP da Recepção</h2>
                         <p class="mb-4 text-gray-300">Este documento detalha o fluxo de trabalho, scripts e padrões de comportamento esperados para a função de Recepção e Vendas, com base nas diretrizes da gestão (Lanny).</p>
-                        
+                       
                         <!-- Seção 1 -->
                         <h3 class="text-2xl font-semibold text-white mt-8 mb-3">1. Perfil Comportamental e Postura (Obrigatório)</h3>
                         <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
@@ -671,13 +805,13 @@
                         <ul class="list-disc list-inside space-y-2 mb-4 text-gray-300">
                              <li><strong>Objetivo:</strong> Coletar o contexto do lead.</li>
                              <li><strong>Script (Perguntas):</strong>
-                                  <ul class="list-disc list-inside ml-4 mt-1">
-                                      <li>"Você já treina? O que você treina?"</li>
-                                      <li>"Você já treinou Crossfit?"</li>
-                                      <li>"Há quanto tempo você está parado(a)?"</li>
-                                      <li>"O que você está procurando?"</li>
-                                      <li>"Você veio por indicação?"</li>
-                                  </ul>
+                                   <ul class="list-disc list-inside ml-4 mt-1">
+                                       <li>"Você já treina? O que você treina?"</li>
+                                       <li>"Você já treinou Crossfit?"</li>
+                                       <li>"Há quanto tempo você está parado(a)?"</li>
+                                       <li>"O que você está procurando?"</li>
+                                       <li>"Você veio por indicação?"</li>
+                                   </ul>
                              </li>
                              <li><strong>Ação:</strong> Reforçar os conceitos da Plur ("aqui é para todo mundo") durante a conversa.</li>
                         </ul>
